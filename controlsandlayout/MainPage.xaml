@@ -9,6 +9,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="66*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="750*"/>
+            <ColumnDefinition Width="750*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="messageButton" Content="Show a message" HorizontalAlignment="Center" VerticalAlignment="Center" Click="messageButton_Click"/>
+        <Button x:Name="ifNElseButton" Content="If/Else" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ifNElseButton_Click"/>
+        <Button x:Name="conditionalTest" Content="Another Conditional Test" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Click="conditionalTest_Click"/>
+        <Button x:Name="loopButton" Content="A loop" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Click="loopButton_Click"/>
+        <TextBlock x:Name="myTextBlock" HorizontalAlignment="Stretch" Grid.Row="2" Text="This is my textblock." TextWrapping="Wrap" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Height="99" Width="938" FontSize="24" RequestedTheme="Default" Visibility="Collapsed"/>
 
     </Grid>
 </Page>

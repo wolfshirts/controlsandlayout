@@ -26,5 +26,58 @@ namespace controlsandlayout
         {
             this.InitializeComponent();
         }
+
+        private void messageButton_Click(object sender, RoutedEventArgs e)
+        {
+            string name = "Xaml is cool and good.";
+            int x = 3;
+            x *= 17;
+            double d = Math.PI / 2;
+            myTextBlock.Text = name + " x is: " + x + " d is: " + d; //hopefully there's a better way to do this than string addition.
+            myTextBlock.Visibility = Visibility.Visible;
+        }
+
+        private void ifNElseButton_Click(object sender, RoutedEventArgs e)
+        {
+            int x = 5;
+            if(x == 10)
+            {
+                myTextBlock.Text = "X is equal to 10";
+                myTextBlock.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                myTextBlock.Text = "X is equal to " + x + " not 10";
+                myTextBlock.Visibility = Visibility.Visible;
+            }
+            
+        }
+
+        private void conditionalTest_Click(object sender, RoutedEventArgs e)
+        {
+            int someValue = 4;
+            string name = "Bob";
+            if ((someValue == 3) || (name == "Bob"))
+            {
+                myTextBlock.Text = "The name was Bob, but someValue = " + someValue;
+                myTextBlock.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void loopButton_Click(object sender, RoutedEventArgs e)
+        {
+            int count = 0;
+            myTextBlock.Visibility = Visibility.Visible;
+            while(count < 10)
+            {
+                count += 1;
+                myTextBlock.Text = count.ToString();
+            }
+            for (int i = 0; i < 20; i++)
+            {
+                count -= 1;
+                myTextBlock.Text = count.ToString();
+            }
+        }
     }
 }
